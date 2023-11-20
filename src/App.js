@@ -16,10 +16,6 @@ function App() {
   return (
       <Router>
         <div>
-
-
-          <hr />
-
           <Routes>
             <Route exact path="/" element = {<LandingPage />} />
             <Route exact path="/login" element = {<LoginPage />} />
