@@ -1,5 +1,5 @@
-import axios, {Axios} from "axios";
-import {LOGIN_USER, REGISTER_USER} from "./types";
+import {AUTH_USER, LOGIN_USER, REGISTER_USER} from "./types";
+import axios from "axios";
 
 export async function loginUser(dataToSubmit) {
 
@@ -36,4 +36,19 @@ export async function registerUser(dataToSubmit) {
     }
 
     return request;
+}
+
+export async function auth() {
+
+    let request = {
+        type: AUTH_USER,
+        payLoad: null,
+    }
+
+    try {
+        const result = await axios.get('/api/user/auth')
+        request.payLoad = result.data;
+    } catch (e) {
+
+    }
 }

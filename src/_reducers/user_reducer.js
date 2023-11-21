@@ -1,4 +1,4 @@
-import {LOGIN_USER, REGISTER_USER} from "../_actions/types";
+import {AUTH_USER, LOGIN_USER, REGISTER_USER} from "../_actions/types";
 
 
 export const UserState = {
@@ -11,6 +11,9 @@ export default function (state = UserState, action) {
             return {state: state, result: action.payLoad}
 
         case REGISTER_USER:
+            return {state: state, result: action.payLoad}
+
+        case AUTH_USER:
             return {state: state, result: action.payLoad}
 
         default:
